@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS动画之旋转魔方轮播</title>
+    <link rel="stylesheet" href="revolveCube.css"/>
+</head>
+
+<body>
+  <div class="container">
+      <div class="cube-wrap">
+              <input type="radio" name="cuber" class="controller" id="1" checked="true">
+              <input type="radio" name="cuber" class="controller" id="2">
+              <input type="radio" name="cuber" class="controller" id="3">
+              <input type="radio" name="cuber" class="controller" id="4">
+              <input type="radio" name="cuber" class="controller" id="5">
+              <input type="radio" name="cuber" class="controller" id="6">
+              <div class="cube">
+                  <div class="cube-face front"><img src="./images/1.jpg"></div>
+                  <div class="cube-face back"><img src="./images/2.jpg"></div>
+                  <div class="cube-face left"><img src="./images/3.jpg"></div>
+                  <div class="cube-face right"><img src="./images/4.jpg"></div>
+                  <div class="cube-face top"><img src="./images/5.jpg"></div>
+                  <div class="cube-face bottom"><img src="./images/6.jpg"></div>
+              </div>
+              <div class="cube_left">
+                  <label for="6" class="cube_action"></label>
+                  <label for="1" class="cube_action"></label>
+                  <label for="2" class="cube_action"></label>
+                  <label for="3" class="cube_action"></label>
+                  <label for="4" class="cube_action"></label>
+                  <label for="5" class="cube_action"></label>
+              </div>
+              <div class="cube_right">
+                  <label for="2" class="cube_action"></label>
+                  <label for="3" class="cube_action"></label>
+                  <label for="4" class="cube_action"></label>
+                  <label for="5" class="cube_action"></label>
+                  <label for="6" class="cube_action"></label>
+                  <label for="1" class="cube_action"></label>
+              </div>
+              <div class="indicators">
+                  <label for="1" class="indicator"></label>
+                  <label for="2" class="indicator"></label>
+                  <label for="3" class="indicator"></label>
+                  <label for="4" class="indicator"></label>
+                  <label for="5" class="indicator"></label>
+                  <label for="6" class="indicator"></label>
+              </div>
+      </div>
+  </div>
+
+</body>
+
+
+</html>

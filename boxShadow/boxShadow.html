@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>boxShadow阴影</title>
+	<style>
+		.box{
+			width:250px;
+			height:60px;
+			line-height: 60px;
+			float:left;
+			margin:20px;
+			text-align:center;
+			vertical-align: middle;
+			border:1px solid rgba(0,0,0,0.05);
+		}
+		.shadow{
+			box-shadow: 0 0 25px 0px rgba(0,0,0,0.22);
+		}
+
+		.shadow-top-left{
+			box-shadow: -10px -10px 25px 0px rgba(0,0,0,0.22);
+		}
+		.shadow-top-right{
+			box-shadow: 10px -10px 25px 0px rgba(0,0,0,0.22);
+		}
+		.shadow-bottom-right{
+			box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.22);
+		}
+		.shadow-bottom-left{
+			box-shadow: -10px 10px 25px 0px rgba(0,0,0,0.22);
+		}
+		.shadow-top{
+			box-shadow:0 -15px 10px -10px rgba(0,0,0,.22);
+		}
+		.shadow-right{
+			box-shadow:15px 0 10px -10px rgba(0,0,0,.22);
+		}
+		.shadow-bottom{
+			box-shadow:0 15px 10px -10px rgba(0,0,0,.22);
+		}
+		.shadow-left{
+			box-shadow:-15px 0 10px -10px rgba(0,0,0,.22);
+		}
+	</style>
+</head>
+<body>
+	<div class="box shadow">四周阴影</div>
+	<div class="box shadow-top-left">左上阴影</div>
+	<div class="box shadow-top-right">右上阴影</div>
+	<div class="box shadow-bottom-right">右下阴影</div>
+	<div class="box shadow-bottom-left">左下阴影</div>
+	<div class="box shadow-top">上单边阴影</div>
+	<div class="box shadow-right">右单边阴影</div>
+	<div class="box shadow-bottom">下单边阴影</div>
+	<div class="box shadow-left">左单边阴影</div>
+</body>
+</html>

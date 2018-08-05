@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>心跳灯</title>
+		<style>
+			.heartbeat {
+				margin: 100px auto;
+				text-indent: -999em;
+				height: 30px;
+				width: 30px;
+				overflow: hidden;
+				background: #ef0000;
+				color: #fff;
+				opacity: 0.1;
+				-webkit-box-shadow: 0 0 3px #ef0000;
+				-moz-box-shadow: 0 0 3px #ef0000;
+				-ms-box-shadow: 0 0 3px #ef0000;
+				-o-box-shadow: 0 0 3px #ef0000;
+				box-shadow: 0 0 3px #ef0000;
+				-webkit-border-radius: 2px;
+				-moz-border-radius: 2px;
+				-ms-border-radius: 2px;
+				-o-border-radius: 2px;
+				border-radius: 2px;
+				-webkit-animation-name: heartbeat;
+				-webkit-animation-duration: 0.83s;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+			@-webkit-keyframes heartbeat {
+				from {
+					opacity: 0.1;
+				}
+				50% {
+					opacity: 1;
+				}
+				to {
+					opacity: 0.1;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="heartbeat">心跳灯</div>
+	</body>
+
+</html>

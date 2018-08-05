@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Progress</title>
+		<style>
+			*+.tg-progress {
+				margin-top: 15px;
+			}
+			
+			.tg-progress {
+				box-sizing: border-box;
+				height: 20px;
+				margin-bottom: 15px;
+				background: #f7f7f7;
+				overflow: hidden;
+				line-height: 20px;
+				box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .07), inset 0 2px 2px rgba(0, 0, 0, .07);
+				border-radius: 4px;
+			}
+			
+			.tg-progress-bar {
+				width: 0;
+				height: 100%;
+				background: #009dd8;
+				float: left;
+				-webkit-transition: width .6s ease;
+				transition: width .6s ease;
+				font-size: 12px;
+				color: #fff;
+				text-align: center;
+				background-image: -webkit-linear-gradient(top, #00b4f5, #008dc5);
+				background-image: linear-gradient(to bottom, #00b4f5, #008dc5);
+				box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .2), inset 0 0 0 1px rgba(0, 0, 0, .1);
+				text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+			}
+			
+			.tg-progress-striped .tg-progress-bar {
+				background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+				background-image: linear-gradient(-45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+				background-size: 30px 30px;
+			}
+			
+			.tg-progress-striped.tg-active .tg-progress-bar {
+				-webkit-animation: tg-progress-bar-stripes 2s linear infinite;
+				animation: tg-progress-bar-stripes 2s linear infinite;
+			}
+			
+			@keyframes tg-progress-bar-stripes {
+				0% {
+					background-position: 0 0;
+				}
+				100% {
+					background-position: 30px 0;
+				}
+			}
+			
+			.tg-progress-danger .tg-progress-bar {
+				background-color: #d32c46;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="tg-progress">
+			<div class="tg-progress-bar" style="width: 40%;">40%</div>
+		</div>
+		<div class="tg-progress tg-progress-striped">
+			<div class="tg-progress-bar" style="width: 65%;"></div>
+		</div>
+		<div class="tg-progress tg-progress-striped tg-active">
+			<div class="tg-progress-bar" style="width: 85%;"></div>
+		</div>
+		<div class="tg-progress tg-progress-striped tg-active tg-progress-danger">
+			<div class="tg-progress-bar" style="width: 85%;"></div>
+		</div>
+	</body>
+
+</html>

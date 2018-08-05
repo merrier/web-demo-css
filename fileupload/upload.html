@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../button/buttons.css" />
+		<link rel="stylesheet" href="../../common/ionicons/css/ionicons.min.css" />
+		<style>
+			body{
+				background:#fff;
+			}
+			.file {
+				margin-top:20px;
+			}
+			.file *,.file{
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+			.file {
+				position:relative;
+			}
+			.file input{
+				position:absolute;
+				top:0;
+				left:0;
+				opacity:0;
+				width:100%;
+				height:100%;
+			}
+			.file-upload{
+				display:inline-block;
+				width:150px;
+				height:80px;
+				background:#eee;
+				border:1px solid #ddd;
+				text-align: center;
+				font-size:3em;
+				line-height:80px;
+				color:#999;
+			}
+			.file-inner{
+				position:relative;
+				width:250px;
+				height:35px;
+				border:1px solid #d9d9d9;
+				border-radius:5px;
+				padding-left:10px;
+				line-height:35px;
+			}
+			.file-inner .file-inner-btn{
+				position:absolute;
+				right:0;
+				top:0;
+				height:100%;
+				box-shadow:none;
+			}
+		</style>
+	</head>
+	<body>
+		<button class="btn btn-primary file">
+			文件上传  <i class="ion-ios-cloud-upload-outline"></i>
+			<input type="file" />
+		</button>
+		
+		<div class="file file-upload">
+			<i class="ion-plus"></i>
+			<input type="file" />
+		</div>
+		<div class="file file-input">
+			<div class="file-inner">
+				选择文件
+				<button class="btn btn-primary file-inner-btn">
+					文件上传  <i class="ion-ios-cloud-upload-outline"></i>
+				</button>
+			</div>
+			<input type="file" />
+		</div>
+	</body>
+</html>

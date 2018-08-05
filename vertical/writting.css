@@ -1,0 +1,26 @@
+.test {
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+	float:left;
+	padding:10px 5px;
+	border: 1px solid #aaa;
+}
+
+.lr-tb {
+	-webkit-writing-mode: horizontal-tb;
+	writing-mode: lr-tb;
+	writing-mode: horizontal-tb;
+}
+
+.tb-rl {
+	-webkit-writing-mode: vertical-rl;
+	writing-mode: tb-rl;
+	writing-mode: vertical-rl;
+}
+
+.tb-lr {
+	-webkit-writing-mode: vertical-lr;
+	writing-mode: tb-rl;
+	writing-mode: vertical-lr;
+}

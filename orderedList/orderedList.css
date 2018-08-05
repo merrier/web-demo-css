@@ -1,0 +1,85 @@
+.roundedList,
+.roundedList *,
+.rectangleList,
+.rectangleList * {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.roundedList ol,
+.rectangleList ol {
+	width: 200px;
+	counter-reset: li;
+	list-style: none;
+	font-size: 15px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+}
+
+.roundedList> ol,
+.rectangleList> ol {
+	margin-left: .7em;
+}
+
+.roundedList ol ol,
+.rectangleList ol ol {
+	margin: 0 0 0 2em;
+}
+
+.roundedList ol li {
+	position: relative;
+	padding: 0.4em 0.4em 0.4em 2em;
+	margin: 0.5em 0;
+	background: #ddd;
+	color: #444;
+	text-decoration: none;
+	border-radius: 0.3em;
+}
+
+.roundedList ol li:before {
+	content: counter(li);
+	counter-increment: li;
+	position: absolute;
+	left: -1.3em;
+	top: 50%;
+	margin-top: -1.3em;
+	background: #f60;
+	height: 2em;
+	width: 2em;
+	line-height: 2em;
+	border: 0.3em solid #fff;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	border-radius: 2em;
+}
+
+.roundedList:nth-child(2) ol li:before{
+	counter-increment: li 2;
+}
+
+.rectangleList li {
+	position: relative;
+	padding: 0.4em 0.4em 0.4em 0.8em;
+	margin: 0.5em 0 0.5em 2em;
+	background: #ddd;
+	color: #444;
+	text-decoration: none;
+}
+
+.rectangleList li::before {
+	content: counter(li);
+	counter-increment: li;
+	position: absolute;
+	left: -2.5em;
+	top: 50%;
+	margin-top: -1em;
+	background: #f60;
+	width: 2em;
+	height: 2em;
+	color: #fff;
+	line-height: 2em;
+	text-align: center;
+}

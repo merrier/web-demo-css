@@ -1,0 +1,113 @@
+.bubble * {
+	margin: 0;
+	padding: 0;
+}
+
+.bubble {
+	margin: 0 auto;
+	width: 350px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	border-radius: 10px;
+	-moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	-khtml-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	position: relative;
+	z-index: 90;
+}
+
+.rectangle {
+	background: #f60;
+	height: 50px;
+	width: 380px;
+	-moz-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.55);
+	-khtml-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.55);
+	-webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.55);
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.55);
+	z-index: 100;
+	position: relative;
+	left: -15px;
+	top: 30px;
+}
+
+.rectangle h2 {
+	font-size: 30px;
+	color: #fff;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+	text-align: center;
+}
+
+/*left*/
+
+.bubble:after {
+	content: "";
+	border: 15px solid #c55205;
+	border-color: transparent #c55205 transparent transparent;
+	height: 0px;
+	width: 0px;
+	position: absolute;
+	left: -30px;
+	top: 65px;
+	z-index: 1;
+}
+
+.bubble:before {
+	content: "";
+	border: 15px solid #c55205;
+	border-color: transparent transparent transparent #c55205;
+	height: 0;
+	width: 0;
+	position: absolute;
+	right: -30px;
+	top: 65px;
+	z-index: 1;
+}
+
+.info {
+	padding: 60px 25px 35px 25px;
+}
+
+.arrow,
+.arrow span{
+	position:absolute;
+	display:block;
+	left:0;
+	top:30px;
+    width: 380px;
+}
+.arrow:before,
+.arrow:after{
+	 content: "";
+    position: absolute;
+    left: -44px;
+    top: 20px;
+    z-index: -1;
+    border: 22px solid transparent;
+}
+.arrow:before {   
+    border-color: #fb6908 #fb6908 transparent transparent;
+}
+.arrow:after {
+    border-color: transparent #fb6908 #fb6908 transparent;
+}
+.arrow span{
+	top:0;
+}
+
+.arrow span:before,
+.arrow span:after{
+	 content: "";
+    position: absolute;
+    left: calc(100% - 30px);
+    top: 20px;
+    z-index: -1;
+    border: 22px solid transparent;
+}
+.arrow span:before {   
+    border-color: #fb6908 transparent transparent #fb6908;
+}
+.arrow span:after {
+    border-color: transparent transparent #fb6908 #fb6908;
+}

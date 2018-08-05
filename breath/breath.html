@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>呼吸灯</title>
+		<style>
+			.breath {
+				margin: 100px auto;
+				height: 45px;
+				line-height: 45px;
+				width: 100px;
+				overflow: hidden;
+				background: #99dd33;
+				color: #fff;
+				opacity: 0.1;
+				-webkit-box-shadow: 0 0 5px #99dd33;
+				-moz-box-shadow: 0 0 5px #99dd33;
+				-ms-box-shadow: 0 0 5px #99dd33;
+				-o-box-shadow: 0 0 5px #99dd33;
+				box-shadow: 0 0 5px #99dd33;
+				-webkit-border-radius: 2px;
+				-moz-border-radius: 2px;
+				-ms-border-radius: 2px;
+				-o-border-radius: 2px;
+				border-radius: 2px;
+				-webkit-animation-name: breath;
+				-webkit-animation-duration: 6s;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+				text-align: center;
+			}
+			
+			@-webkit-keyframes breath {
+				from {
+					opacity: 0.1;
+				}
+				50% {
+					opacity: 1;
+				}
+				to {
+					opacity: 0.1;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="breath">呼吸灯</div>
+	</body>
+
+</html>

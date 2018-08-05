@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>文本效果</title>
+		<style>
+			body {
+				background: #5774b8;
+			}
+			
+			.letterpress {
+				color: hsl(210, 13%, 75%);
+				text-shadow: 0 -1px 1px black;
+			}
+			
+			.highlight {
+				color: #ffc;
+				text-shadow: 0 0 .2em #fff, 0 0 .3em #fff;
+			}
+			
+			.extruded {
+				color: white;
+				text-shadow: 0 1px hsl(0, 0%, 85%), 0 2px hsl(0, 0%, 80%), 0 3px hsl(0, 0%, 75%), 0 4px hsl(0, 0%, 70%), 0 5px hsl(0, 0%, 65%), 0 5px 10px black;
+			}
+			
+			
+			.textShadow {
+				color: #fff;
+				text-shadow: 0.1em 0.1em 0 rgba(0, 0, 0, 0.5);
+			}
+			
+			p {
+				position:relative;
+				font-size: 2em;
+				margin:5px 10px;
+			}
+			
+			@keyframes tg-progress-bar-stripes {
+				0% {
+					background-position: 0 0;
+				}
+				100% {
+					background-position: 30px 0;
+				}
+			}
+			.bgText {
+				font-size:5em;
+				font-weight: bolder;
+				background-color: #d32c46;
+				background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+				background-image: linear-gradient(-45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+				background-size: 30px 30px;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				display:inline-block;
+				-webkit-animation: tg-progress-bar-stripes 2s linear infinite;
+				animation: tg-progress-bar-stripes 2s linear infinite;
+			}
+			.mask{
+				font-size:3em;
+			}
+			.mask:after {
+			    content: attr(data-text);
+			    color: rgba(0,0,0,.35);
+			    text-shadow: none;
+			    position: absolute;
+			    left: .0875em;
+			    top: .0875em;
+			    z-index: -1;
+			    -webkit-mask-image: url(../../common/Images/mask.png);
+			    mask-image: url(../../common/Images/mask.png);
+			}
+			.fill{
+				font-size:3em;
+				-webkit-text-fill-color:transparent;
+				-webkit-text-stroke:1px #fff;
+			}
+		</style>
+	</head>
+
+	<body>
+		<p class="textShadow">文字投影</p>
+		<p class="letterpress">凸板印刷效果</p>
+		<p class="highlight">文字外发光效果</p>
+		<p class="fill">镂空文字</p>
+		<p class="extruded">3D文字效果</p>
+		<p class="mask" data-text="自定义文字投影">自定义文字投影</p>
+		<p class="bgText tg-progress-striped">渐变文字</p>
+	</body>
+
+</html>

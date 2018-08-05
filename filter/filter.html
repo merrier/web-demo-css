@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>图片滤镜</title>
+		<style>
+			.box {
+				float: left;
+				margin: 20px;
+			}
+			
+			img {
+				width: 200px;
+				height: 200px;
+			}
+			
+			.blur {
+				-webkit-filter: blur(2px);
+				filter: blur(2px);
+			}
+			
+			.grayscale {
+				-webkit-filter: grayscale(100%);
+				filter: grayscale(100%);
+			}
+			
+			.sepia {
+				-webkit-filter: sepia(100%);
+				filter: sepia(100%);
+			}
+			
+			.saturate {
+				-webkit-filter: saturate(5);
+				filter: saturate(5)
+			}
+			
+			.hue-rotate {
+				-webkit-filter: hue-rotate(180deg);
+				filter: hue-rotate(180deg)
+			}
+			
+			.invert {
+				-webkit-filter: invert(1);
+				filter: invert(1);
+			}
+			
+			.opacity {
+				-webkit-filter: opacity(.5);
+				filter: opacity(.5)
+			}
+			
+			.brightness {
+				-webkit-filter: brightness(3);
+				filter: brightness(3)
+			}
+			
+			.contrast {
+				-webkit-filter: contrast(.5);
+				filter: contrast(.5)
+			}
+			
+			.drop-shadow {
+				-webkit-filter: drop-shadow(10px 10px 5px #000);
+				filter: drop-shadow(10px 10px 5px #000);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="box">
+			<img src="../../common/Images/girl.jpg" class="blur" alt="">
+			<p>模糊（blur）</p>
+		</div>
+		<div class="box">
+			<img src="../../common/Images/girl.jpg" class="grayscale" alt="">
+			<p>灰度（grayscale）</p>
+		</div>
+		<div class="box">
+			<img src="../../common/Images/girl.jpg" class="sepia" alt="">
+			<p>褐色（sepia）</p>
+		</div>
+		<div class="box">
+			<img src="../../common/Images/girl.jpg" class="saturate" alt="">
+			<p>饱和度（saturate）</p>
+		</div>
+		<div class="box">
+			<img src="../../common/Images/girl.jpg" class="hue-rotate" alt="">
+			<p>色相旋转（hue-rotate）</p>
+		</div>
+		<div class="box">
+			<img src="../../common/Images/girl.jpg" class="invert" alt="">
+			<p>反色（invert）</p>
+		</div>
+		<div class="box">
+			<img src="../../common/Images/girl.jpg" class="opacity" alt="">
+			<p>透明度（opacity）</p>
+		</div>
+		<div class="box">
+			<img src="../../common/Images/girl.jpg" class="brightness" alt="">
+			<p>亮度（brightness）</p>
+		</div>
+		<div class="box">
+			<img src="../../common/Images/girl.jpg" class="contrast" alt="">
+			<p>对比度（contrast）</p>
+		</div>
+		<div class="box">
+			<img src="../../common/Images/girl.jpg" class="drop-shadow" alt="">
+			<p>阴影（drop-shadow）</p>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>渐变效果</title>
+		<style>
+			.box {
+				width: 200px;
+				height: 200px;
+				float: left;
+				padding: 10px;
+				margin: 10px 20px;
+				color: #333;
+				text-align: center;
+				font-size: 16px;
+				font-weight: bold;
+			}
+			
+			.linearGradient {
+				background: linear-gradient(#fb3 50%, #58a 0);
+				background-size: 100% 30px;
+			}
+			
+			.linearGradient2 {
+				background: linear-gradient(to right, #fb3 50%, #58a 0);
+				/* to right == 90deg */
+				background-size: 30px 100%;
+			}
+			
+			.linearGradient3 {
+				background: linear-gradient(45deg, #fb3 25%, #58a 0, #58a 50%, #fb3 0, #fb3 75%, #58a 0);
+				background-size: 30px 30px;
+			}
+			
+			.linearGradient4 {
+				background: repeating-linear-gradient(60deg, #fb3, #fb3 15px, #58a 0, #58a 30px)
+			}
+			
+			.grid {
+				background: white;
+				background-image: linear-gradient(90deg, rgba(200, 0, 0, .5) 50%, transparent 0), linear-gradient( rgba(200, 0, 0, .5) 50%, transparent 0);
+				background-size: 30px 30px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="box linearGradient">水平条纹</div>
+		<div class="box linearGradient2">垂直条纹</div>
+		<div class="box linearGradient3">斜向条纹</div>
+		<div class="box linearGradient4">60度斜向条纹</div>
+		<div class="box grid">桌布网格</div>
+	</body>
+
+</html>

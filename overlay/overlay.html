@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>遮罩条</title>
+	<style>
+		*,*:before,*:after{
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		.mask,.mask-door{
+			position:relative;
+			width:150px;
+			height:150px;
+			overflow:hidden;
+		}
+		.mask:after{
+			content:attr(data-title);
+			position:absolute;
+            width:100%;
+            top:100%;
+            left:0;
+            padding:.7em 0;
+            text-align: center;
+            color:#fff;
+            background:rgba(0,0,0,.5);
+            -webkit-transition:all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+            opacity:0;
+		}
+		.mask:hover:after{
+			opacity:1;
+			-webkit-transform:translate(0, -100%);
+			transform:translate(0, -100%);
+		}
+		
+		.mask-door:before,
+		.mask-door:after{
+			position:absolute;
+            left:0;
+            width:100%;
+            opacity:0;
+            color:#fff;
+            height:50%;
+            text-align: center;
+            background:rgba(0,0,0,.5);
+			 -webkit-transition:all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+		}
+		.mask-door:before {
+			content:'';
+            top:0;
+			-webkit-transform:translate(0, -100%);
+			transform:translate(0, -100%);
+		}
+		.mask-door:after{
+			content:attr(data-title);
+            top:50%;
+            padding:.7em 0;
+			-webkit-transform:translate(0, 100%);
+			transform:translate(0, 100%);
+		}
+		.mask-door:hover:before,
+		.mask-door:hover:after{
+			opacity:1;
+			-webkit-transform:translate(0, 0);
+			transform:translate(0, 0);
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="mask" data-title="遮罩条">
+		<img src="../../common/Images/girl.jpg" alt="">
+	</div>
+	<br>
+	<div class="mask-door" data-title="遮罩条">
+		<img src="../../common/Images/girl.jpg" alt="">
+	</div>
+</body>
+</html>

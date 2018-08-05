@@ -1,0 +1,95 @@
+.highlight-box:before {
+	display: block;
+	top: -200%;
+	left: -100%;
+	width: 50%;
+	height: 300%;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	background: -webkit-linear-gradient(left, rgba(255, 255, 255, .05) 20%, rgba(255, 255, 255, .6) 65%, rgba(255, 255, 255, .05) 100%);
+	background: -moz-linear-gradient(left, rgba(255, 255, 255, .05) 20%, rgba(255, 255, 255, .6) 65%, rgba(255, 255, 255, .05) 100%);
+	background: -o-linear-gradient(left, rgba(255, 255, 255, .05) 20%, rgba(255, 255, 255, .6) 65%, rgba(255, 255, 255, .05) 100%);
+	background: -ms-linear-gradient(left, rgba(255, 255, 255, .05) 20%, rgba(255, 255, 255, .6) 65%, rgba(255, 255, 255, .05) 100%);
+	background: linear-gradient(left, rgba(255, 255, 255, .05) 20%, rgba(255, 255, 255, .6) 65%, rgba(255, 255, 255, .05) 100%);
+	content: '';
+	z-index: 2;
+	position: absolute;
+}
+
+.highlight-box {
+	width: 300px;
+	height: 120px;
+	overflow: hidden;
+	position: relative;
+}
+
+.highlight-box img {
+	width: 100%;
+	height: 100%;
+}
+
+.highlight-box:hover:before {
+	-webkit-animation: crossed .5s linear;
+	-moz-animation: crossed .5s linear;
+	-o-animation: crossed .5s linear;
+	-ms-animation: crossed .5s linear;
+	animation: crossed .5s linear;
+}
+
+@-webkit-keyframes crossed {
+	0% {
+		top: -200%;
+		left: -100%;
+	}
+	100% {
+		top: -50px;
+		left: 100%;
+	}
+}
+
+@-moz-keyframes crossed {
+	0% {
+		top: -200%;
+		left: -100%;
+	}
+	100% {
+		top: -50px;
+		left: 100%;
+	}
+}
+
+@-o-keyframes crossed {
+	0% {
+		top: -200%;
+		left: -100%;
+	}
+	100% {
+		top: -50px;
+		left: 100%;
+	}
+}
+
+@-ms-keyframes crossed {
+	0% {
+		top: -200%;
+		left: -100%;
+	}
+	100% {
+		top: -50px;
+		left: 100%;
+	}
+}
+
+@keyframes crossed {
+	0% {
+		top: -200%;
+		left: -100%;
+	}
+	100% {
+		top: -50px;
+		left: 100%;
+	}
+}

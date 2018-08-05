@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>类似webpack官网的盒子动画</title>
+    <link rel="stylesheet" href="webpack-box.css"/>
+</head>
+
+<style>
+    /*来自http://www.pixijs.com*/
+</style>
+
+<body>
+<div class="project ani-lfr" data-delay="0.5" data-speed="0.35" data-animation="long-from-right" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); opacity: 1;">
+    <a href="https://spotify-valentines.com/" target="_blank">
+        <div class="thumbnail" style="background-image:url(http://www.pixijs.com/wp/wp-content/uploads/Spotify-Valentines-540x312.jpeg)"></div>
+        <div class="description">
+            <h5>Spotify Valentines</h5>
+            <p class="big-text">Stink Digital</p>
+        </div>
+    </a>
+</div>
+</body>
+
+<script>
+
+  // 需要引入jQ、TweenMax
+  if (bpc.clickType !== 'tap') {
+    TweenMax.set($('.project-list .project'), {rotationY: 0, rotationX: 0, rotationZ: 0, transformPerspective: 1000});
+    $('.project-list .project').mouseover(function() {
+      $('.project-list .project').mousemove(function(e) {
+        var x = e.pageX - $(this).offset().left,
+          y = e.pageY - $(this).offset().top;
+
+        var px = x/$(this).width(), py = y/$(this).height();
+        var xx = -15 + (30*px), yy = 15 - (30*py);
+
+        //TweenMax.killTweensOf($(this));
+        TweenMax.to($(this), 0.5, {rotationY: xx, rotationX: yy, rotationZ: 0, transformPerspective: 1000, ease: Quad.easeOut});
+      });
+    }).mouseout(function() {
+      $(this).unbind('mousemove');
+      //TweenMax.killTweensOf($(this));
+      TweenMax.to($(this), 0.5, {rotationY: 0, rotationX: 0, rotationZ: 0, transformPerspective: 1000, ease: Quad.easeOut});
+    });
+  }
+
+</script>
+
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			:root {
+				--borderWidth: 2px;
+			}
+			*,
+			*:before,
+			*:after {
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+			
+			img {
+				display: block;
+			}
+			
+			.dynamic-border {
+				position: relative;
+				width: 200px;
+				height: 200px;
+				background: gray;
+			}
+			
+			.dynamic-border:before,
+			.dynamic-border:after,
+			.dynamic-border span:first-child:before,
+			.dynamic-border span:first-child:after {
+				content: "";
+				position: absolute;
+				background: red;
+				-webkit-transition: all .2s ease;
+				transition: all .2s ease;
+			}
+			/*上边*/
+			
+			.dynamic-border:before {
+				width: 0;
+				top: -2px;
+				right: 0;
+				height: 2px;
+			}
+			/*右边*/
+			
+			.dynamic-border:after {
+				width: 2px;
+				height: 0;
+				right: -2px;
+				bottom: 0;
+			}
+			/*下边*/
+			
+			.dynamic-border span:first-child:before {
+				width: 0;
+				height: 2px;
+				bottom: -2px;
+				left: 0;
+			}
+			/*左边*/
+			
+			.dynamic-border span:first-child:after {
+				width: 2px;
+				height: 0;
+				top: 0;
+				left: -2px;
+			}
+			
+			.dynamic-border-1:hover:before,
+			.dynamic-border-1:hover span:first-child:before {
+				-webkit-transition-delay: .2s;
+				transition-delay: .2s;
+			}
+			
+			.dynamic-border:hover:before,
+			.dynamic-border:hover span:first-child:before {
+				width: calc(100% + 2px);
+			}
+			
+			.dynamic-border:hover:after,
+			.dynamic-border:hover span:first-child:after {
+				height: calc(100% + 2px);
+			}
+			
+			.dynamic-border-2:hover span:first-child:before {
+				-webkit-transition-delay: .2s;
+				transition-delay: .2s;
+			}
+			
+			.dynamic-border-2:hover:before {
+				-webkit-transition-delay: .6s;
+				transition-delay: .6s;
+			}
+			
+			.dynamic-border-2:hover:after {
+				-webkit-transition-delay: .4s;
+				transition-delay: .4s;
+			}
+			
+			.dynamic-border {
+				margin: 10px;
+				float: left;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="dynamic-border dynamic-border-1">
+			<span></span>
+			<img src="../../common/Images/girl.jpg" alt="">
+		</div>
+
+		<div class="dynamic-border dynamic-border-2">
+			<span></span>
+			<img src="../../common/Images/girl.jpg" alt="">
+		</div>
+	</body>
+
+</html>

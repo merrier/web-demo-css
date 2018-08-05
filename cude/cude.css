@@ -1,0 +1,141 @@
+.box {
+    position: absolute;
+    top: 30%;
+    left: 200px;
+    margin-top: -150px;
+    -webkit-transition: transform .6s;
+    transition: transform .6s;
+}
+
+.cude {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin: 100px auto;
+    font-family: 'font';
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transform: rotateX(-30deg) rotateY(-80deg);
+    transform-origin: 50% 50% 0;
+    -webkit-transform-origin: 50% 50% 0;
+    -webkit-animation: rotate 20s infinite;
+    animation: rotate 20s infinite;
+}
+
+.surface {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background: #666;
+    opacity: 0.8;
+    font-size: 60px;
+    text-align: center;
+    line-height: 200px;
+    font-weight: bold;
+    color: #fff;
+    border: 1px solid #fff;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.surface img {
+    width: 100%;
+}
+
+.front {
+    transform: rotateY(0) translateZ(100px);
+}
+
+.back {
+    transform: translateZ(-100px) rotateY(180deg);
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(100px);
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+.bottom {
+    transform: rotateX(90deg) translateZ(-100px);
+}
+
+.cude:hover .front {
+    transform: rotateY(0) translateZ(150px);
+}
+
+.cude:hover .back {
+    transform: translateZ(-150px) rotateY(180deg);
+}
+
+.cude:hover .left {
+    transform: rotateY(-90deg) translateZ(150px);
+}
+
+.cude:hover .right {
+    transform: rotateY(90deg) translateZ(150px);
+}
+
+.cude:hover .top {
+    transform: rotateX(90deg) translateZ(150px);
+}
+
+.cude:hover .bottom {
+    transform: rotateX(90deg) translateZ(-150px);
+}
+
+@-webkit-keyframes rotate {
+    from {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    to {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+.surface-in {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+}
+
+.surface-in img {
+    width: 100px;
+    height: 100px;
+}
+
+.front-in {
+    transform: rotateY(0deg) translateZ(50px);
+}
+
+.back-in {
+    transform: rotateY(180deg) translateZ(50px);
+}
+
+.left-in {
+    transform: rotateY(-90deg) translateZ(50px);
+}
+
+.right-in {
+    transform: rotateY(90deg) translateZ(50px);
+}
+
+.top-in {
+    transform: rotateX(90deg) translateZ(-50px);
+}
+
+.bottom-in {
+    transform: rotateX(-90deg) translateZ(-50px);
+}

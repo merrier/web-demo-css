@@ -1,0 +1,52 @@
+/* Scrollbar */
+
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb {
+	border-right: 1px solid transparent;
+	border-left: 1px solid transparent;
+}
+
+::-webkit-scrollbar-button:start {
+	width: 10px;
+	height: 12px;
+	background: transparent url(../../common/Images/arrow.png) no-repeat 0 0;
+}
+
+::-webkit-scrollbar-button:end {
+	width: 10px;
+	height: 12px;
+	background: transparent url(../../common/Images/arrow.png) no-repeat -50px 0;
+}
+
+::-webkit-scrollbar-button:start:hover {
+	background-color: #eee;
+}
+
+::-webkit-scrollbar-button:end {
+	background-color: #eee;
+}
+
+::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-corner {
+	display: block;
+}
+
+::-webkit-scrollbar-track:hover {
+	background-color: rgba(0, 0, 0, 0.15);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	background-color: rgba(0, 0, 0, 0.5);
+}
