@@ -312,3 +312,38 @@
 
 [出处](https://blog.csdn.net/findhappy117/article/details/79208058)
 [在线演示](http://merrier.github.io/web-demo-css/beamWave/beamWave.html)
+
+### 径向菜单
+
+![径向菜单](./Sampleimg/circleMenu.gif)
+
+[出处](https://www.cnblogs.com/xianwang/p/5049671.html)
+[在线演示](http://merrier.github.io/web-demo-css/circleMenu/index.html)
+
+### 仿淘宝手风琴效果
+
+![仿淘宝手风琴效果](./Sampleimg/accordion.gif)
+
+<!-- [出处](https://www.cnblogs.com/xianwang/p/5049671.html) -->
+[在线演示](http://merrier.github.io/web-demo-css/accordion/index.html)
+
+### css3 Hover效果
+
+![css3 Hover效果](./Sampleimg/hoverEffect.gif)
+
+<!-- [出处](https://www.cnblogs.com/xianwang/p/5049671.html) -->
+[在线演示](http://merrier.github.io/web-demo-css/hoverEffect/index.html)
+
+### 图片阴影效果
+
+![图片阴影效果](./Sampleimg/pictureShadow.gif)
+
+<!-- [出处](https://www.cnblogs.com/xianwang/p/5049671.html) -->
+[在线演示](http://merrier.github.io/web-demo-css/pictureShadow/index.html)
+
+### CSS瀑布流
+
+![CSS瀑布流](./Sampleimg/waterfall.gif)
+
+<!-- [出处](https://www.cnblogs.com/xianwang/p/5049671.html) -->
+[在线演示](http://merrier.github.io/web-demo-css/waterfall/index.html)

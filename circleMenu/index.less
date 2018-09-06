@@ -1,0 +1,90 @@
+@color: #063;
+@radius: 20px;
+@distance: 140px;
+@count: 12;
+@container-radius: 40px;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ffc;
+}
+
+.center() {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    
+}
+
+.radius(@radius, @color:transparent) {
+    width: @radius * 2;
+    height: @radius * 2;
+    border-radius: @radius;
+    background-color: @color;
+    box-sizing: border-box;
+}
+
+.container {
+    .center();
+    .radius(@distance);
+    border: 1px dotted #aaa;
+}
+
+
+.circle-container {
+    .center();
+    .radius(@container-radius, #033);
+    cursor: pointer;
+
+    &:hover {
+        .generate-circle();
+
+        .generate-circle(@i:1) when (@i < @count+1) {
+            .circle:nth-child(@{i}) {
+                .radius(@radius, @color);
+                @top: round(sin(pi() * 2 * (@i - 1)/ @count) * @distance) - @radius;
+                @left: round(cos(pi() * 2 * (@i - 1)/ @count) * @distance) - @radius;
+                -webkit-transform: translate(@top, @left);
+                -moz-transform: translate(@top, @left);
+                -ms-transform: translate(@top, @left);
+                -o-transform: translate(@top, @left);
+                transform: translate(@top, @left);
+                line-height: @radius * 2;
+                
+                opacity: 1;
+                font-size: 1em;
+                transition: all 800ms ease;
+                &:hover {
+                    background-color: #033;
+                }
+            }
+            .generate-circle(@i + 1);
+        }
+
+        .shadow {
+            .radius(@distance + 30);
+            .center();
+            z-index: -1;
+        }
+    }
+
+    .circle {
+        .radius(0);
+        .center();
+        font-size: 0;
+        opacity: 0;
+        
+        cursor: pointer;
+        text-align: center;
+        color: #ffc;
+    }
+}
